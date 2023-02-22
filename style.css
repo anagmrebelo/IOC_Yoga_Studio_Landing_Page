@@ -1,0 +1,260 @@
+/*  NOTES
+- fonts:
+    - Didot - Regular (headings)
+    - Baskerville - Regular (400) (body text) 
+    - Lato - Light, Regular, Bold (300, 400, 700) (Links and specific elements)
+- Colors:
+    - beige - #F8F6F4
+    - pink - #F59186
+- Map: [https://snazzymaps.com/style/115413/light-and-beige](https://snazzymaps.com/style/115413/light-and-beige)
+
+*/
+
+
+/* NOTES - TO DO
+
+- changing the fonts
+- changing the background images
+- typograph styles
+    - general styles
+    - featured text (changing the color of the text)
+    - font-size
+- button styles
+- image styles
+
+
+
+*/
+
+
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img     {max-width: 100%;}
+
+/*  Temporary Styles */
+
+/* * {
+    padding: 0.5rem;
+    border: 2px solid rgb(200,200,200);
+}  */
+
+
+/* html, 
+body {
+    border: none;
+} */
+
+/* 
+h1,h2,h3,h4,h5,h6,p, a {
+    border: 2px solid rgb(179, 84, 84);
+} */
+
+
+/* Re-usable Utiity Classes  */
+.tall-30 { min-height: 30vh; }
+.tall-40 { min-height: 40vh; } 
+.tall-50 { min-height: 50vh; }
+.tall-60 { min-height: 60vh; }
+.tall-70 { min-height: 70vh; }
+.tall-80 { min-height: 80vh; }
+.tall-90 { min-height: 90vh; }
+
+
+.padded    { padding: 5%;    }
+.padded-10 { padding: 5% 10%;    }
+
+.padded-1,
+.grid.padded-1  { padding: 1rem;  }
+
+.padded-2,
+.grid.padded-2  { padding: 2rem;  }
+
+.margin-b-0 { margin-bottom: 0; }
+
+.bg-light      { background-color: #F8F6F4;  }    
+.bg-featured   { background-color: #F8F6F4;  }
+.bg-dark       { background-color: #FFA995;  }
+
+.text-light     { color: white; } 
+.text-featured  { color: #F59186;}
+
+
+.left   { text-align: left; }
+.center { text-align: center; }
+.right  { text-align: right; }
+
+
+/* General typography & universal styles  */
+
+body{
+    font-family:'Baskervville', serif;
+    color: rgb(60,60,60);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'didot', serif;
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+h1 {font-size: 3rem;}
+h2 {font-size: 2.5rem;}
+h3 {font-size: 2rem;}
+
+p{
+    line-height: 1.4;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+
+ul { margin-left: 1rem;}
+
+li {padding-left: 0.5rem;}
+
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child {
+    margin-bottom: 0;
+}
+
+.text-lg    {font-size: 3.5rem;}
+.text-xl    {font-size: 4.5rem;}
+.text-xxl   {font-size: 8.5rem;}
+.text-bold  {font-weight: bold;}
+
+
+.text-lato{
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    color: #e37165;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.button{
+    color: inherit;
+    border: 1px solid;
+    border-radius: 2rem;
+    border-color: #F59186;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+    transition: all 0.2s;
+}
+
+.button:hover {
+    border-color: rgb(60,60,60);
+}
+
+
+
+/* Header & Footer */
+
+footer {
+    padding-bottom: 2rem;
+    color: rgb(140,140,140);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+
+/* Images & Background Images */
+
+.bg-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.bg-stone{
+    background-image: url('/images/stone.png');
+}
+
+.bg-studio-2 {
+    background-image: url('/images/zen-studio-2.jpg');
+}
+
+.bg-leaves {
+    background-image: url('/images/zen-studio-1.jpg');
+    background-position: 50% 31%;
+}
+
+.bg-studio {
+    background-image: url('/images/zen-studio-3.jpg');
+}
+
+.bg-map {
+    background-image: url('/images/light-colored-map.png');
+}
+
+.shape-teardrop {
+    border-radius: 20rem;
+    border-bottom-right-radius: 0;
+}
+
+.shape-window {
+    border-radius: 20rem 20rem 0 0;
+}
+
+/* Gridlex Media Queries  
+@media (max-width: 36em)	Max 576px	_xs-*
+@media (max-width: 48em)	Max 768px	_sm-*
+@media (max-width: 64em)	Max 1024px	_md-*
+@media (max-width: 80em)	Max 1280px	_lg-*
+
+*/
+
+/* Gridlex small media query - Max 768px -	_sm-**/
+	
+@media (max-width: 48em) {
+    .text-xxl { font-size:6.5rem}
+    .text-xl { font-size: 3.5rem;}
+    .sm-block { display: block;}
+
+    .bg-leaves{ background-image: url('/images/leaves-light.png');}
+
+    .text-center-sm { text-align: center;}
+}
+
+
+/* Gridlex extra small media query - Max 576px	_xs-*/
+
+@media (max-width: 36em) {
+    .text-xxl { font-size: 4.5rem;}
+    .text-xl { font-size: 2.5rem;}
+    .text-lg { font-size: 2.5rem;}
+    
+}
+
+
+/* Gridlex extra small media query - Max 350x	_xs-*/
+
+@media (max-width: 22em) {
+    .text-xxl { font-size: 2.5rem;}
+}
